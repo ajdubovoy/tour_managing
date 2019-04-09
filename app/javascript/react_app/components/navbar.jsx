@@ -11,18 +11,26 @@ const NavbarContainer = styled.div`
   height: 60px;
   display: flex;
   align-items: center;
+  box-shadow: 0px 1px 4px 0 rgba(0,0,0,0.08);
+  background-color: white;
 `
 
 const NavLinkStyled = styled(NavLink)`
   display: block;
   margin: 0 1rem;
+  text-transform: uppercase;
+  font-weight: 200;
+  letter-spacing: 0.15rem;
   :hover {
     text-decoration: none;
   }
   &.selected {
-    border-bottom: blue 0.1rem solid;
+    border-bottom: #157ffb 0.01rem solid;
     padding-bottom: 0.2rem;
-    padding-top: 0.3rem;
+    padding-top: 0.21rem;
+    :hover {
+      border-bottom: #025ac1 0.01rem solid;
+    }
   }
 `
 
