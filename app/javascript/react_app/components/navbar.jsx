@@ -8,23 +8,28 @@ const NavbarContainer = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  height: 40px;
+  height: 60px;
   display: flex;
-  padding-top: 10px;
+  align-items: center;
 `
 
 const NavLinkStyled = styled(NavLink)`
   display: block;
   margin: 0 1rem;
-  &.active {
-    color: red;
+  :hover {
+    text-decoration: none;
+  }
+  &.selected {
+    border-bottom: blue 0.1rem solid;
+    padding-bottom: 0.2rem;
+    padding-top: 0.3rem;
   }
 `
 
 const NavbarLink = (props) => {
   return(
     <NavLinkStyled
-      activeClassName="active"
+      activeClassName="selected"
       {...props}
     >
       {props.children}
