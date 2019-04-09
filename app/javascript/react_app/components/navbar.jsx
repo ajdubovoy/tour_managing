@@ -25,7 +25,7 @@ const NavLinkStyled = styled(NavLink)`
     text-decoration: none;
   }
   &.selected {
-    border-bottom: #157ffb 0.01rem solid;
+    border-bottom: ${props => props.theme.main} 0.01rem solid;
     padding-bottom: 0.2rem;
     padding-top: 0.21rem;
     :hover {
