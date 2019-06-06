@@ -30,7 +30,7 @@ letter-spacing: 0.15rem;
   padding-bottom: 0.2rem;
   padding-top: 0.21rem;
   :hover {
-    border-bottom: #025ac1 0.01rem solid;
+    border-bottom: ${props => props.theme.colors.active} 0.01rem solid;
   }
 }
 `

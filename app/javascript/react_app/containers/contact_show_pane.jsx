@@ -2,18 +2,24 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEdit, faChevronRight } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom';
+import OutlineButton from '../design_toolkit/outline_button';
 
 const ContactShowContainer = styled.div`
 width: 100%;
 height: 100%;
-padding: ${props => props.theme.spacing.lg};
+padding: ${props => props.theme.spacing.xl};
 list-style: none;
 background: ${props => props.theme.colors.bgPrimary};
 `;
 
 const Name = styled.h1``;
 
-const Venue = styled.p``;
+const Venue = styled.p`
+margin-bottom: ${props => props.theme.spacing.md};
+`;
 
 const Info = styled.ul`
 list-style: none;
@@ -22,6 +28,12 @@ padding-inline-start: ${props => props.theme.spacing.none};
 li{
   margin-bottom: ${props => props.theme.spacing.sm};
 }
+`;
+
+const EditButton = styled.div`
+position: absolute;
+right: ${props => props.theme.spacing.lg};
+bottom: ${props => props.theme.spacing.lg};
 `;
 
 class ContactShowPane extends Component {
@@ -43,12 +55,25 @@ class ContactShowPane extends Component {
     if (Object.keys(contact).length > 0) {
       return (
         <ContactShowContainer>
+          <Link to={`/contacts/${contact.id}/edit`}>
+            <EditButton>
+              <OutlineButton>
+                <FontAwesomeIcon icon={faEdit} />
+              </OutlineButton>
+            </EditButton>
+          </Link>
+          <Link to={`/venues/${contact.venue.id}`}>
+            <Venue>
+              <OutlineButton uppercase>
+                {contact.venue.name} <FontAwesomeIcon icon={faChevronRight} />
+              </OutlineButton>
+            </Venue>
+          </Link>
           <Name>{contact.first_name} {contact.last_name}</Name>
           <Info>{this.renderInfo({
             email: contact.email,
             phone: contact.phone
           })}</Info>
-        <Venue>{contact.venue.name}</Venue>
         </ContactShowContainer>
       );
     } else {

@@ -1,6 +1,7 @@
 const primaryTheme = {
   colors: {
     main: "#157ffb",
+    active: "#1480FB",
     bgPrimary: 'white',
     bgSecondary: '#F4F4F4',
     body: 'black'
@@ -11,7 +12,8 @@ const primaryTheme = {
     none: '0 !important',
     sm: '0.25rem',
     md: '0.5rem',
-    lg: '1rem'
+    lg: '1rem',
+    xl: '2rem'
   },
   borders: {
     bottom: 'border-bottom: rgba(0,0,0,0.075) 1px solid',
