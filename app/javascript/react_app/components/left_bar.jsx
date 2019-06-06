@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const LeftBar = styled.div`
-width: 40vw;
+width: ${props => props.theme.spacing.leftBar}vw;
 margin: 0;
 height: 100%;
 float: left;

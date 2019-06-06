@@ -6,6 +6,7 @@ const primaryTheme = {
   },
   spacing: {
     navbarHeight: '60px',
+    leftBar: '30',
     none: '0 !important',
     sm: '0.25rem',
     md: '0.5rem',
