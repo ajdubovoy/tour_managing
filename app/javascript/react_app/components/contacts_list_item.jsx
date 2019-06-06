@@ -2,9 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 
 const ContactsListItemElement = styled.li`
-background: white;
-padding: ${props => props.theme.spacing.md};
+background: ${props => props.selected ? props.theme.colors.bgPrimary : props.theme.colors.bgSecondary};
+padding: ${props => props.theme.spacing.lg} ${props => props.theme.spacing.md};
 cursor: pointer;
+${props => props.theme.borders.bottom};
 `;
 
 const Name = styled.h3`
@@ -19,9 +20,9 @@ font-size: 0.8rem;
 margin: 0;
 `;
 
-const ContactsListItem = ({ contact }) => {
+const ContactsListItem = ({ contact, selected, handleClick }) => {
   return(
-    <ContactsListItemElement onClick={() => this.props.handleClick(contact)}>
+    <ContactsListItemElement onClick={() => handleClick(contact)} selected={contact === selected}>
       <Venue>{contact.venue.name}</Venue>
       <Name>{contact.first_name} <strong>{contact.last_name}</strong></Name>
     </ContactsListItemElement>

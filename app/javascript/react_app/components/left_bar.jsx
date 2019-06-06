@@ -6,6 +6,7 @@ margin: 0;
 height: 100%;
 float: left;
 overflow: scroll;
+${props => props.theme.borders.right};
 `
 
 export default LeftBar;

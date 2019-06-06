@@ -11,6 +11,7 @@ import { ThemeProvider } from 'styled-components';
 import primaryTheme from './themes/primary_theme';
 
 import contactsReducer from './reducers/contacts_reducer'
+import contactReducer from './reducers/contact_reducer'
 
 import App from './components/app';
 import ContactsIndex from './components/contacts_index';
@@ -19,7 +20,8 @@ import ContactsIndex from './components/contacts_index';
 const reducers = combineReducers(
   {
     form: formReducer,
-    contacts: contactsReducer
+    contacts: contactsReducer,
+    contact: contactReducer
   }
 );
 

@@ -12,7 +12,8 @@ height: ${props => props.theme.spacing.navbarHeight};
 display: flex;
 align-items: center;
 box-shadow: 0px 1px 4px 0 rgba(0,0,0,0.08);
-background-color: white;
+background-color: ${props => props.theme.colors.bgPrimary};
+z-index: 2000;
 `
 
 const NavLinkStyled = styled(NavLink)`

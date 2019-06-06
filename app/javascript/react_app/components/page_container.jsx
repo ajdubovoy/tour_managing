@@ -10,6 +10,7 @@ const PageContainer = styled.div`
   height: calc(100vh - ${props => props.theme.spacing.navbarHeight});
   overflow: hidden;
   display: flex;
+  background: ${props => props.theme.colors.bgSecondary};
 `
 
 export default PageContainer;

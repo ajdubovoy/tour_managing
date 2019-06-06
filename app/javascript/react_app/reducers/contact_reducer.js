@@ -1,13 +1,13 @@
-import { LOAD_CONTACTS } from '../actions';
+import { SET_CONTACT } from '../actions';
 
-export default function contactsReducer(state, action) {
+export default function contactReducer(state, action) {
   if (state === undefined) {
     // Reducer initialization
-    return [];
+    return {}
   }
 
   switch (action.type) {
-    case LOAD_CONTACTS:
+    case SET_CONTACT:
       return action.payload;
     default:
       return state;
