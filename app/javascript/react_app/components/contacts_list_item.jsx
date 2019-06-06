@@ -22,7 +22,7 @@ margin: 0;
 
 const ContactsListItem = ({ contact, selected, handleClick }) => {
   return(
-    <ContactsListItemElement onClick={() => handleClick(contact)} selected={contact === selected}>
+    <ContactsListItemElement onClick={() => handleClick(contact)} selected={contact.id === selected.id}>
       <Venue>{contact.venue.name}</Venue>
       <Name>{contact.first_name} <strong>{contact.last_name}</strong></Name>
     </ContactsListItemElement>
