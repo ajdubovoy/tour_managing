@@ -3,7 +3,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
 
-import { loadContacts, setContact } from '../actions';
+import { loadContacts } from '../actions';
 
 import ContactsListItem from '../components/contacts_list_item';
 
@@ -19,16 +19,12 @@ class ContactsList extends Component {
     this.props.loadContacts();
   }
 
-  handleClick = (contact) => {
-    this.props.setContact(contact);
-  }
-
   renderContacts = () => {
     if (!this.props.contacts) {
       return [];
     }
 
-    return this.props.contacts.map(c => <ContactsListItem contact={c} handleClick={this.handleClick} key={c.id} selected={this.props.contact} />)
+    return this.props.contacts.map(c => <ContactsListItem contact={c} key={c.id} selected={this.props.contact} />)
   }
 
   render() {
@@ -42,7 +38,7 @@ class ContactsList extends Component {
 
 function mapDispatchToProps(dispatch) {
   return bindActionCreators(
-    { loadContacts, setContact },
+    { loadContacts },
     dispatch
   );
 }

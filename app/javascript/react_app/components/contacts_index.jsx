@@ -1,9 +1,8 @@
 import React from 'react';
-import PageContainer from './page_container';
-import LeftBar from './left_bar';
-import RightBar from './right_bar';
+import PageContainer from '../design_toolkit/page_container';
+import LeftBar from '../design_toolkit/left_bar';
+import RightBar from '../design_toolkit/right_bar';
 import ContactsList from '../containers/contacts_list';
-import ContactShow from '../containers/contact_show';
 
 const ContactsIndex = (props) => {
   return (
@@ -12,7 +11,6 @@ const ContactsIndex = (props) => {
         <ContactsList />
       </LeftBar>
       <RightBar>
-        <ContactShow />
       </RightBar>
     </PageContainer>
   );

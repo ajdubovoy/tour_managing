@@ -1,6 +1,6 @@
 const BASE_URL = '/api/v1';
 export const LOAD_CONTACTS = 'LOAD_CONTACTS';
-export const SET_CONTACT = 'SET_CONTACT';
+export const LOAD_CONTACT = 'LOAD_CONTACT';
 
 function getFetch(url) {
   // For use when doing GET requests, i.e. from an #index action, to keep code DRY
@@ -41,7 +41,7 @@ function patchFetch(url, body, callback) {
 
 // Contacts
 export function loadContacts() {
-  const url = BASE_URL + '/contacts'
+  const url = BASE_URL + '/contacts';
   const promise = getFetch(url);
 
   return {
@@ -51,9 +51,12 @@ export function loadContacts() {
 }
 
 // Contact
-export function setContact(contact) {
+export function loadContact(id) {
+  const url = BASE_URL + '/contacts/' + id;
+  const promise = getFetch(url);
+
   return {
-    payload: contact,
-    type: SET_CONTACT
+    payload: promise,
+    type: LOAD_CONTACT
   }
 }

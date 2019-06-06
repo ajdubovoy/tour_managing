@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import UnstyledLink from '../design_toolkit/unstyled_link';
 
 const ContactsListItemElement = styled.li`
 background: ${props => props.selected ? props.theme.colors.bgPrimary : props.theme.colors.bgSecondary};
 padding: ${props => props.theme.spacing.lg} ${props => props.theme.spacing.md};
-cursor: pointer;
 ${props => props.theme.borders.bottom};
 `;
 
@@ -22,10 +22,12 @@ margin: 0;
 
 const ContactsListItem = ({ contact, selected, handleClick }) => {
   return(
-    <ContactsListItemElement onClick={() => handleClick(contact)} selected={contact.id === selected.id}>
-      <Venue>{contact.venue.name}</Venue>
-      <Name>{contact.first_name} <strong>{contact.last_name}</strong></Name>
-    </ContactsListItemElement>
+    <UnstyledLink to={`/contacts/${contact.id}`}>
+      <ContactsListItemElement selected={contact.id === selected.id}>
+        <Venue>{contact.venue.name}</Venue>
+        <Name>{contact.first_name} <strong>{contact.last_name}</strong></Name>
+      </ContactsListItemElement>
+    </UnstyledLink>
   );
 }
 

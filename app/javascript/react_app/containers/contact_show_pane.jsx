@@ -13,16 +13,25 @@ background: ${props => props.theme.colors.bgPrimary};
 
 const Name = styled.h1``;
 
-const Info = styled.div``;
+const Venue = styled.p``;
 
-class ContactShow extends Component {
+const Info = styled.ul`
+list-style: none;
+margin-top: ${props => props.theme.spacing.lg};
+padding-inline-start: ${props => props.theme.spacing.none};
+li{
+  margin-bottom: ${props => props.theme.spacing.sm};
+}
+`;
+
+class ContactShowPane extends Component {
   renderInfo = (info) => {
     return Object.keys(info).map((i) => {
       if (info[i]) {
         return (
-          <p key={i}>
+          <li key={i}>
             <strong>{i}:</strong> {info[i]}
-          </p>
+          </li>
         );
       }
     });
@@ -36,9 +45,10 @@ class ContactShow extends Component {
         <ContactShowContainer>
           <Name>{contact.first_name} {contact.last_name}</Name>
           <Info>{this.renderInfo({
-            Email: contact.email,
-            Phone: contact.phone
+            email: contact.email,
+            phone: contact.phone
           })}</Info>
+        <Venue>{contact.venue.name}</Venue>
         </ContactShowContainer>
       );
     } else {
@@ -53,4 +63,4 @@ function mapStateToProps(state, ownProps) {
   };
 }
 
-export default connect(mapStateToProps)(ContactShow);
+export default connect(mapStateToProps)(ContactShowPane);

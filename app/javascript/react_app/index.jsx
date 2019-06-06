@@ -15,7 +15,7 @@ import contactReducer from './reducers/contact_reducer'
 
 import App from './components/app';
 import ContactsIndex from './components/contacts_index';
-
+import ContactsShow from './containers/contacts_show';
 
 const reducers = combineReducers(
   {
@@ -42,6 +42,7 @@ ReactDOM.render(
           <Switch>
             <Route exact path="/tours" component={App} />
             <Route exact path="/venues" component={App} />
+            <Route path="/contacts/:id" component={ContactsShow} />
             <Route exact path="/contacts" component={ContactsIndex} />
             <Redirect exact from="/" to='/contacts' />
           </Switch>

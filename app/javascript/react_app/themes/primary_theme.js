@@ -2,7 +2,8 @@ const primaryTheme = {
   colors: {
     main: "#157ffb",
     bgPrimary: 'white',
-    bgSecondary: '#F4F4F4'
+    bgSecondary: '#F4F4F4',
+    body: 'black'
   },
   spacing: {
     navbarHeight: '60px',
