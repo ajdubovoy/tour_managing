@@ -11,6 +11,7 @@ margin: 0;
 height: 100%;
 float: right;
 overflow: scroll;
+background: ${props => props.theme.colors.bgPrimary};
 `
 
 export default RightBar;

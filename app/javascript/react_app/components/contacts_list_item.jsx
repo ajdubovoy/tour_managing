@@ -3,9 +3,10 @@ import styled from 'styled-components';
 import UnstyledLink from '../design_toolkit/unstyled_link';
 
 const ContactsListItemElement = styled.li`
-background: ${props => props.selected ? props.theme.colors.bgPrimary : props.theme.colors.bgSecondary};
+background: ${props => props.selected ? props.theme.colors.active : 'transparent'};
 padding: ${props => props.theme.spacing.lg} ${props => props.theme.spacing.md};
 ${props => props.theme.borders.bottom};
+color: ${props => props.selected ? props.theme.colors.opposite : props.theme.colors.body}
 `;
 
 const Name = styled.h3`

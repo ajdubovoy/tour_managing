@@ -5,7 +5,9 @@ const primaryTheme = {
     active: "#1480FB",
     bgPrimary: 'white',
     bgSecondary: '#F4F4F4',
-    body: 'black'
+    bgTertiary: '#C4C4C4',
+    body: 'black',
+    opposite: 'white'
   },
   spacing: {
     navbarHeight: '60px',

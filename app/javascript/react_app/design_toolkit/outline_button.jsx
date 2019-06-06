@@ -5,7 +5,7 @@ const OutlineButton = styled(Button)`
 background-color: transparent;
 color: ${props => props.theme.colors.active};
 ${(props) => {
-  if (props.uppercase) {
+  if (props.uppercaseStyle) {
     return( 
       `
       text-transform: uppercase;

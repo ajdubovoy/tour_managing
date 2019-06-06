@@ -8,8 +8,6 @@ import { Link } from 'react-router-dom';
 import OutlineButton from '../design_toolkit/outline_button';
 
 const ContactShowContainer = styled.div`
-width: 100%;
-height: 100%;
 padding: ${props => props.theme.spacing.xl};
 list-style: none;
 background: ${props => props.theme.colors.bgPrimary};
@@ -64,7 +62,7 @@ class ContactShowPane extends Component {
           </Link>
           <Link to={`/venues/${contact.venue.id}`}>
             <Venue>
-              <OutlineButton uppercase>
+              <OutlineButton uppercaseStyle>
                 {contact.venue.name} <FontAwesomeIcon icon={faChevronRight} />
               </OutlineButton>
             </Venue>

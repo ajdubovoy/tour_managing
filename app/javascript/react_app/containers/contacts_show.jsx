@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import PageContainer from '../design_toolkit/page_container';
 import LeftBar from '../design_toolkit/left_bar';
 import RightBar from '../design_toolkit/right_bar';
+import CloseButton from '../design_toolkit/close_button';
 import ContactsList from '../containers/contacts_list';
 import ContactShowPane from '../containers/contact_show_pane';
 
@@ -28,6 +29,7 @@ class ContactsShow extends Component {
         <ContactsList />
       </LeftBar>
       <RightBar>
+        <CloseButton to="/contacts" />
         <ContactShowPane />
       </RightBar>
       </PageContainer>
