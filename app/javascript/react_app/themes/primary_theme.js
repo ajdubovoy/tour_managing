@@ -6,6 +6,7 @@ const primaryTheme = {
     bgPrimary: 'white',
     bgSecondary: '#F4F4F4',
     bgTertiary: '#C4C4C4',
+    activeSecondary: '#A4A4A4',
     body: 'black',
     opposite: 'white'
   },
@@ -27,7 +28,10 @@ const primaryTheme = {
     md: "768px",
     lg: "992px",
     xl: "1200px"
-  })
+  }),
+  transitions: {
+      background: 'transition color 500ms ease-out'
+  }
 };
 
 export default primaryTheme;

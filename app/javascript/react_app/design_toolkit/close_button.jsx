@@ -21,6 +21,10 @@ left: ${props => props.theme.spacing.md};
 ${props => props.theme.media.greaterThan("sm")`
   display: none;
 `}
+&:hover{
+  background: ${props => props.theme.colors.activeSecondary};
+}
+${props => props.theme.transitions.background};
 `;
 
 const CloseButton = (props) => {
