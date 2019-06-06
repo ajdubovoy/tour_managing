@@ -10,13 +10,16 @@ import { ThemeProvider } from 'styled-components';
 
 import primaryTheme from './themes/primary_theme';
 
+import contactsReducer from './reducers/contacts_reducer'
+
 import App from './components/app';
 import ContactsIndex from './components/contacts_index';
 
 
 const reducers = combineReducers(
   {
-    form: formReducer
+    form: formReducer,
+    contacts: contactsReducer
   }
 );
 
