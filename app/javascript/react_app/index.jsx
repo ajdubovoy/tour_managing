@@ -11,6 +11,7 @@ import { ThemeProvider } from 'styled-components';
 import primaryTheme from './themes/primary_theme';
 
 import App from './components/app';
+import ContactsIndex from './components/contacts_index';
 
 
 const reducers = combineReducers(
@@ -34,7 +35,10 @@ ReactDOM.render(
       <ThemeProvider theme={primaryTheme}>
         <App>
           <Switch>
-            <Route path="/" component={App} />
+            <Route exact path="/tours" component={App} />
+            <Route exact path="/venues" component={App} />
+            <Route exact path="/contacts" component={ContactsIndex} />
+            <Redirect exact from="/" to='/contacts' />
           </Switch>
         </App>
       </ThemeProvider>

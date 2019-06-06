@@ -48,9 +48,9 @@ const NavbarLink = (props) => {
 const Navbar = (props) => {
   return(
     <NavbarContainer>
-      <NavbarLink exact to="/">Tours</NavbarLink>
       <NavbarLink to="/contacts">Contacts</NavbarLink>
       <NavbarLink to="/venues">Venues</NavbarLink>
+      <NavbarLink to="/tours">Tours</NavbarLink>
     </NavbarContainer>
   );
 }
