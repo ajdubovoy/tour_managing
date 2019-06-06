@@ -10,7 +10,7 @@ const ContactsIndex = (props) => {
       <LeftBar>
         <ContactsList />
       </LeftBar>
-      <RightBar>
+      <RightBar mobileHidden>
       </RightBar>
     </PageContainer>
   );

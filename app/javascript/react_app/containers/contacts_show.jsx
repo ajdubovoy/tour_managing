@@ -24,7 +24,7 @@ class ContactsShow extends Component {
   render() {
     return (
       <PageContainer>
-      <LeftBar>
+      <LeftBar mobileHidden>
         <ContactsList />
       </LeftBar>
       <RightBar>

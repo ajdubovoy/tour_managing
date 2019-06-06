@@ -1,3 +1,4 @@
+import { generateMedia } from "styled-media-query";
 const primaryTheme = {
   colors: {
     main: "#157ffb",
@@ -18,7 +19,13 @@ const primaryTheme = {
   borders: {
     bottom: 'border-bottom: rgba(0,0,0,0.075) 1px solid',
     right: 'border-right: rgba(0,0,0,0.1) 1px solid'
-  }
+  },
+  media: generateMedia({
+    sm: "576px",
+    md: "768px",
+    lg: "992px",
+    xl: "1200px"
+  })
 };
 
 export default primaryTheme;
